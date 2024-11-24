@@ -12,3 +12,7 @@ async def protected_route(api_key: str = Depends(get_api_key)):
 async def login(id_token: str):
     user_data = google_login(id_token)
     return user_data
+
+@app.get("/")
+async def root():
+    return {"message": "Welcome to TST-CafeLink API!"}
