@@ -1,5 +1,5 @@
-fastapi
-uvicorn
-supabase-py
-python-dotenv
-pydantic-settings
+fastapi==0.95.2
+uvicorn==0.22.0
+supabase-py==0.1.7
+python-dotenv==1.0.0
+pydantic-settings==2.0.3
