@@ -1,5 +1,8 @@
 from fastapi import FastAPI
 from app.routers.auth import auth_router
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Create FastAPI app
 app = FastAPI(

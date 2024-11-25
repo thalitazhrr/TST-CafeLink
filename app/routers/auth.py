@@ -10,9 +10,11 @@ SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJ
 supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 # OAuth Configuration
-GOOGLE_CLIENT_ID = "997040951284-8dmpltijstn2d12grctb9r0l169pnvmu.apps.googleusercontent.com"
-GOOGLE_CLIENT_SECRET = "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"
+GOOGLE_CLIENT_ID = os.getenv("GOOGLE_CLIENT_ID")
+GOOGLE_CLIENT_SECRET = os.getenv("GOOGLE_CLIENT_SECRET")
 REDIRECT_URI = "http://localhost:8000/auth/callback"  # Adjust this based on your deployment
+
+# print(GOOGLE_CLIENT_ID)
 
 # FastAPI Router for Auth
 auth_router = APIRouter()
